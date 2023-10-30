@@ -1,6 +1,6 @@
 <h3>WELCOME TO ECOMMERCE DESIGN PROJECT</h3>
 
-<img src="https://md-shefat-masum.github.io/ecommerce_design/mockup/1.jpg" style="max-width: 450px; width: 100%;">
+<img src="https://github.com/Md-shefat-masum/ecommerce_design/blob/main/mockup/1.jpg?raw=true" style="max-width: 450px; width: 100%;">
 
 <h5>Technologies</h5>
 <ol>
@@ -57,7 +57,7 @@
 
 <h5>Section descriptions</h5>
 <p>
-A lawyer portfolio website is a digital platform designed to showcase the professional accomplishments, expertise, and services of a lawyer or a law firm. It serves as an online representation of their legal practice and provides potential clients with valuable information about the lawyer's background, areas of specialization, and successful case outcomes. Here is a description of what you might find on a lawyer portfolio website:
+A ecommerce design website is a digital platform designed to showcase the professional accomplishments, expertise, and services of a lawyer or a law firm. It serves as an online representation of their legal practice and provides potential clients with valuable information about the lawyer's background, areas of specialization, and successful case outcomes. Here is a description of what you might find on a ecommerce design website:
 </p>
 
 <p>
