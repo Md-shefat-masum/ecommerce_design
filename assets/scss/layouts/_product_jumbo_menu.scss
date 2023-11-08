@@ -1,0 +1,142 @@
+#product_category_jumbo_menu {
+    background: rgba(0, 0, 0, 0.575);
+    height: calc(100vh - 103px);
+    transition-duration: .3s;
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    width: 100vw;
+    top: 103px;
+
+    &.active{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .product_list_menu {
+        border-top: 1px solid var(--primary);
+        .overlay {
+            background-color: var(--white);
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+
+            .product_categories {
+                display: flex;
+
+                .category_list {
+                    width: 290px;
+                    border-right: 1px solid #9E9E9E;
+                    padding: 24px 16px;
+
+                    ul {
+                        li {
+                            margin-bottom: 16px;
+
+                            a {
+                                display: flex;
+                                align-items: center;
+                                gap: 16px;
+                                color: var(--black);
+                                font-size: 18px;
+
+                                .svg_icon {
+                                    height: 24px;
+                                    width: 24px;
+                                }
+
+                                .text {}
+
+                                &:hover {
+                                    color: var(--primary);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .subcategory_list {
+                    display: flex;
+                    flex: 1;
+                    justify-content: space-between;
+
+                    .subcategories {
+                        width: 260px;
+                        padding: 24px 16px;
+
+                        ul {
+                            li {
+                                margin-bottom: 16px;
+
+                                a {
+                                    display: flex;
+                                    align-items: center;
+                                    gap: 16px;
+                                    color: var(--black);
+                                    font-size: 18px;
+
+                                    .svg_icon {
+                                        height: 24px;
+                                        width: 24px;
+                                    }
+
+                                    .text {}
+
+                                    &:hover {
+                                        color: var(--primary);
+                                    }
+                                }
+
+                                .view_all {
+                                    color: var(--primary);
+                                    font-size: 16px;
+                                }
+                            }
+                        }
+                    }
+
+                    .top_products {
+                        flex: 1;
+                        .close{
+                            text-align: right;
+                            padding-top: 10px;
+                            padding-right: 10px;
+                            a{
+                                background-color: var(--primary);
+                                color: white;
+                                padding: 10px 15px;
+                                border-radius: 4px;
+                                margin-bottom: 3px;
+                            }
+                        }
+                        .nav_product_items {
+                            display: flex;
+                            gap: 16px;
+                            justify-content: flex-end;
+                            padding: 24px;
+                            .nav_product {
+                                width: 150px;
+                                padding: 8px;
+                                border-radius: 5px;
+                                box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.356);
+
+                                img {
+                                    margin-bottom: 16px;
+                                }
+
+                                a {
+                                    h4 {
+                                        font-size: 16px;
+                                        color: var(--black);
+                                        font-weight: 400;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+    }
+
+}
