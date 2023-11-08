@@ -1,0 +1,84 @@
+nav {
+    .nav_body {
+        // border: 1px solid var(--border);
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 18px 0px;
+
+        .logo {
+            height: 65px;
+
+            img {
+                // height: 100%;
+            }
+        }
+
+        .menu {
+            // border: 1px solid var(--border);
+
+            ul {
+                // border: 1px solid var(--border);
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                height: 100%;
+                gap: 65px;
+
+
+                li {
+                    a {
+                        font-size: 18px;
+                        color: var(--black);
+                        position: relative;
+
+                        &::after {
+                            content: '';
+                            height: 2px;
+                            width: 0px;
+                            position: absolute;
+                            left: -10px;
+                            bottom: -10px;
+                            background: var(--gradient-linear-stroke-bottom, linear-gradient(147deg, rgba(12, 104, 244, 0.30) 60.98%, rgba(12, 104, 244, 0.70) 81.93%, rgba(12, 104, 244, 0.30) 99.45%));
+                            background-position: center center;
+                            transition-duration: .3s;
+                        }
+
+                        &:focus,
+                        &:hover {
+                            color: var(--primary);
+                            &::after{
+                                width: calc(100% + 20px);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .action_menues {
+            // border: 1px solid var(--border);
+
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                height: 100%;
+                gap: 25px;
+
+                li {
+                    a {
+                        .svg_icon{
+                            transition-duration: .3s;
+                        }
+                        &:hover{
+                            .svg_icon{
+                                background-color: var(--primary);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
