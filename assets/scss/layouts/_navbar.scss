@@ -67,6 +67,7 @@ nav {
                 gap: 25px;
 
                 li {
+                    position: relative;
                     a {
                         .svg_icon{
                             transition-duration: .3s;
@@ -75,6 +76,12 @@ nav {
                             .svg_icon{
                                 background-color: var(--primary);
                             }
+                        }
+                    }
+
+                    &:has(.active){
+                        > a .svg_icon{
+                            background-color: var(--primary);
                         }
                     }
                 }
