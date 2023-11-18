@@ -47,7 +47,8 @@ nav {
                         &:focus,
                         &:hover {
                             color: var(--primary);
-                            &::after{
+
+                            &::after {
                                 width: calc(100% + 20px);
                             }
                         }
@@ -68,19 +69,37 @@ nav {
 
                 li {
                     position: relative;
+
                     a {
-                        .svg_icon{
+                        position: relative;
+
+                        .svg_icon {
                             transition-duration: .3s;
                         }
-                        &:hover{
-                            .svg_icon{
+
+                        &:hover {
+                            .svg_icon {
                                 background-color: var(--primary);
                             }
                         }
+
+                        .cart_amount {
+                            height: 20px;
+                            min-width: 20px;
+                            background-color: var(--primary);
+                            border-radius: 32px;
+                            text-align: center;
+                            line-height: 20px;
+                            color: var(--white);
+                            font-size: 16px;
+                            position: absolute;
+                            bottom: -8px;
+                            right: -11px;
+                        }
                     }
 
-                    &:has(.active){
-                        > a .svg_icon{
+                    &:has(.active) {
+                        >a .svg_icon {
                             background-color: var(--primary);
                         }
                     }
