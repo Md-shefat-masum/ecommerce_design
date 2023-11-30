@@ -59,6 +59,19 @@ var product_categories = [
     },
 ]
 
+let search_keywords = [
+    "MacBook Pro",
+    "AirPods Pro",
+    "Samsung S9",
+    "Tablet",
+    "Xiaomi ",
+    "JBL speaker",
+    "Canon",
+    "speaker",
+    "Asus",
+    "MagSafe",
+]
+
 function increment_cart(price_target){
     event.preventDefault();
     let input = event.currentTarget.previousElementSibling;
