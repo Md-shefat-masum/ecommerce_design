@@ -77,7 +77,7 @@
                     <div class="action_menues">
                         <ul>
                             <li>
-                                <a href="#">
+                                <a onclick="event.preventDefault(); search_modal.classList.toggle('active');" href="#">
                                     <div class="svg_icon" style="-webkit-mask-image: url('./assets/images/icons/search.svg');
                                     mask-image: url('./assets/images/icons/search.svg');"></div>
                                 </a>
@@ -289,6 +289,91 @@
                                             <img x-bind:src="product.image" alt="product-image">
                                             <a href="#">
                                                 <h4 x-text="product.name"></h4>
+                                            </a>
+                                        </div>
+                                    </template>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="search_modal">
+        <div class="search_overlay">
+            <div class="search_card" x-data="{searh_key: ``}">
+                <div class="top">
+                    <form class="search_form" action="#">
+                        <div class="search_input">
+                            <input x-model="searh_key" placeholder="search your product" class="input" type="text">
+                            <button class="submit_btn">
+                                <div class="svg_icon"
+                                    style="-webkit-mask-image: url('./assets/images/icons/search.svg');mask-image: url('./assets/images/icons/search.svg');">
+                                </div>
+                            </button>
+                        </div>
+                        <div class="icon_part">
+                            <div class="close" onclick="event.preventDefault(); search_modal.classList.toggle('active');" >
+                                <div class="svg_icon"
+                                    style="-webkit-mask-image: url('./assets/images/icons/close.svg');mask-image: url('./assets/images/icons/close.svg');">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="bottom" >
+                    <div x-show="searh_key.length == 0" class="suggested_keywords">
+                        <div class="keyword_group">
+                            <h3 class="heading">The Most Searched Items</h3>
+                            <ul class="link_list" x-data="{search_keywords}">
+                                <template x-for="skeyword in search_keywords">
+                                    <li>
+                                        <a href="#" x-text="skeyword"></a>
+                                    </li>
+                                </template>
+                            </ul>
+                        </div>
+                        <div class="keyword_group">
+                            <h3 class="heading">The Most Searched Items</h3>
+                            <ul class="link_list" x-data="{search_keywords}">
+                                <template x-for="skeyword in search_keywords">
+                                    <li>
+                                        <a href="#" x-text="skeyword"></a>
+                                    </li>
+                                </template>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div x-show="searh_key.length > 0" class="suggested_result">
+                        <div class="left">
+                            <h4 class="search_at_a_glance">view 17 out of 30 results</h4>
+                            <div class="result_list">
+                                <ul x-data="{}">
+                                    <template x-for="i in 18">
+                                        <li>
+                                            <a href="#">
+                                                <span x-text="i"></span> 
+                                                iphone 
+                                                <span class="search_match" x-text="searh_key"></span>
+                                            </a>
+                                        </li>
+                                    </template>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="match_products">
+                                <div x-data="{jumbo_menu_products}" class="product_items">
+                                    <template x-for="product in jumbo_menu_products">
+                                        <div class="nav_product">
+                                            <div class="img">
+                                                <img x-bind:src="product.image" alt="product-image">
+                                            </div>
+                                            <a href="#">
+                                                <h4 class="product_title" x-text="product.name"></h4>
                                             </a>
                                         </div>
                                     </template>
