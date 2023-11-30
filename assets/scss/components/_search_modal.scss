@@ -1,0 +1,180 @@
+#search_modal {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition-duration: .3s;
+    transform: scale(0);
+
+    &.active{
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+
+    .search_overlay {
+        background-color: rgba(0, 0, 0, .4);
+        height: 100%;
+        position: relative;
+
+        .search_card {
+            width: 808px;
+            height: 490px;
+            background-color: var(--white);
+            border-radius: 8px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 32px 50px 60px;
+
+            .top {
+                margin-bottom: 48px;
+
+                .search_form {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .search_input {
+                        flex: 1;
+                        border: 1px solid var(--black);
+                        display: flex;
+                        justify-content: space-between;
+                        border-radius: 8px;
+
+                        .input {
+                            flex: 1;
+                            padding: 16px;
+                            font-size: 14px;
+                            border: 0;
+                            outline: 0;
+                            border-radius: 8px;
+                        }
+
+                        .submit_btn {
+                            background-color: transparent;
+                            border: 0;
+                            padding-right: 15px;
+                        }
+                    }
+
+                    .icon_part {
+                        width: 170px;
+                        display: flex;
+                        justify-content: flex-end;
+                        padding-top: 15px;
+
+                        .close {
+                            height: 24px;
+                            width: 20px;
+                        }
+                    }
+                }
+            }
+
+            .bottom {
+                .suggested_keywords {
+                    display: flex;
+                    gap: 50px;
+                    flex-wrap: wrap;
+
+                    .keyword_group {
+                        .heading {
+                            font-size: 20px;
+                            font-weight: 600;
+                            margin-bottom: 40px;
+                        }
+
+                        .link_list {
+                            display: grid;
+                            grid-template-columns: 1fr 1fr;
+                            column-gap: 30px;
+                            row-gap: 30px;
+
+                            li {
+                                a {
+                                    font-size: 18px;
+                                    color: var(--black);
+                                    text-transform: capitalize;
+                                    font-weight: 300;
+
+                                    &:hover {
+                                        color: var(--primary);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .suggested_result {
+                    display: flex;
+                    gap: 30px;
+
+                    .left {
+                        width: 250px;
+
+                        .search_at_a_glance {
+                            font-size: 16px;
+                            color: #444;
+                            font-weight: 400;
+                            margin-bottom: 40px;
+                        }
+
+                        .result_list {
+                            ul {
+                                display: grid;
+                                grid-template-columns: 1fr 1fr;
+                                gap: 30px;
+                                row-gap: 5px;
+
+                                li {
+                                    a {
+                                        color: var(--black);
+
+                                        &:hover {
+                                            color: var(--primary);
+                                        }
+
+                                        .search_match {
+                                            color: #888;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    .right {
+                        flex: 1;
+
+                        .match_products {
+                            .product_items {
+                                display: flex;
+                                gap: 10px;
+
+                                .nav_product {
+                                    box-shadow: -2px 2px 15px -1px rgba(113, 113, 113, 0.12);
+                                    padding: 5px;
+                                }
+
+                                .img {
+                                    height: 100px;
+                                }
+
+                                .product_title {
+                                    font-size: 10px;
+                                    line-height: 16px;
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
