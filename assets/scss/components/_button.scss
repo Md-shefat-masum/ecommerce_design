@@ -1,0 +1,23 @@
+.btn{
+    display: inline-block;
+    padding: 14px 40px;
+    background-color: #f1f1f1;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition-duration: .3s;
+
+    &.btn_v1{
+        background-color: var(--primary);
+        color: var(--white);
+        &:hover{
+            background-color: var(--secondary);
+        }
+    }
+    &.btn_v2{
+        background-color: var(--secondary);
+        color: var(--white);
+        &:hover{
+            background-color: var(--primary);
+        }
+    }
+}

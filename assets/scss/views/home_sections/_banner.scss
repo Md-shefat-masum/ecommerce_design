@@ -1,0 +1,25 @@
+// #banner{}
+.banner_content{
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    .left{
+        .heading{
+            font-size: 64px;
+            color: var(--navy_blue);
+            margin-top: 56px;
+        }
+        .sub_heading{
+            font-size: 32px;
+            color: var(--navy_blue);
+            margin-top: 50px;
+            margin-bottom: 110px;
+            span{
+                color: var(--secondary);
+            }
+        }
+
+        .banner_btn{
+            padding: 19px 95px;
+        }
+    }
+}
