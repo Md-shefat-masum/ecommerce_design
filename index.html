@@ -585,6 +585,68 @@
         </div>
     </section>
 
+    <section>
+        <div class="container">
+            <div class="product_list">
+                <div class="section_heading">
+                    <h2>New Products</h2>
+                    <div class="right_side">
+                        <a href="">
+                            view all
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div x-data="" class="product_list product_list2">
+                    <template x-for="i in 5">
+                        <div class="product_item product_item_2">
+                            <div class="top">
+                                <div class="img">
+                                    <a href="#">
+                                        <img x-bind:id="`p${i}_img_1`" x-bind:src="`./assets/images/dummy_product/${i}.jpg`" alt="">
+                                    </a>
+                                </div>
+                                <a href="#" class="favourite">
+                                    <i class="far fa-heart"></i>
+                                </a>
+                                <ul class="color_list">
+                                    <li x-on:mouseover="change_product_preview_image(`p${i}_img_1`,`./assets/images/dummy_product/${i+3}.jpg`)" style="background-color: red;"></li>
+                                    <li x-on:mouseover="change_product_preview_image(`p${i}_img_1`,`./assets/images/dummy_product/${i+4}.jpg`)" style="background-color: rgb(27, 39, 60);"></li>
+                                    <li x-on:mouseover="change_product_preview_image(`p${i}_img_1`,`./assets/images/dummy_product/${i+5}.jpg`)" style="background-color: rgb(92, 81, 34);"></li>
+                                </ul>
+                                <a href="#" class="btn banner_btn btn_v2 add_to_cart_btn">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    <span>
+                                        Add To Cart
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="divider"></div>
+                            <div class="bottom">
+                                <div class="title">
+                                    <a href="#">
+                                        <h3>Iphone 14 promax 256 gig 14 promax 256 gig</h3>
+                                    </a>
+                                </div>
+                                <div class="price">
+                                    <div class="left">
+                                        <del>1200$</del>
+                                        <b>950$</b>
+                                    </div>
+                                    <div class="right">
+                                        <i class="fas fa-star"></i> 
+                                        <span class="rating">4.8</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <script>
         $(document).ready(function(){
             $(".top_sales_product_slide").owlCarousel({
