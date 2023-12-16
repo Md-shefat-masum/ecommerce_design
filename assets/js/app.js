@@ -89,3 +89,8 @@ function decrement_cart(price_target){
     let price = document.getElementById(price_target);
     price.innerText = parseFloat(price.dataset.price) * input.value
 }
+
+function change_product_preview_image(target, image_src){
+    // console.log(target, image_src);
+    document.getElementById(target).src = image_src;
+}
