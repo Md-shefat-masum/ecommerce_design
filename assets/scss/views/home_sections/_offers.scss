@@ -1,0 +1,118 @@
+#offers {
+    padding-bottom: 40px;
+}
+
+.offer_contents {
+    display: grid;
+    grid-template-columns: 1fr 444px;
+    gap: 24px;
+
+    .offer_btn {
+        position: absolute;
+        left: 66px;
+        bottom: 36px;
+        padding: 14px 32px;
+    }
+
+    .left {
+        // border: 1px solid var(--border, red);
+
+        .left_content {
+            padding: 25px;
+            position: relative;
+            display: grid;
+            grid-template-columns: 1fr 270px;
+            gap: 25px;
+            height: 100%;
+
+            .img {
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                left: 0;
+                top: 0;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: unset;
+                    
+                }
+            }
+
+            .content_left {
+                position: relative;
+                z-index: 99;
+                .offer_title{
+                    font-size: 24px;
+                    margin-bottom: 60px;
+                }
+                .product_image{
+                    img{
+                        max-width: 380px;
+                    }
+                }
+            }
+
+            .content_right {
+                position: relative;
+                z-index: 99;
+
+                .count_down{
+                    display: flex;
+                    gap: 8px;
+                    margin-bottom: 30px;
+                    li{
+                        padding: 8px;
+                        border-radius: 8px;
+                        text-align: center;
+                        border: 1px solid var(--black);
+                        height: 46px;
+                        width: 49px;
+                        .amount{
+                            font-weight: 600;
+                            font-size: 16px;
+                            margin-bottom: 8px;
+                        }
+                        .title{
+                            font-size: 14px;
+                        }
+                    }
+                }
+                .offer_details_title{
+                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+                .description{
+                    font-size: 16px;
+                    margin-bottom: 25px;
+                }
+            }
+        }
+
+    }
+
+    .right {
+        // border: 1px solid var(--border, red);
+
+        .right_content {
+            height: 444px;
+            width: 444px;
+            position: relative;
+
+            .img {
+                height: 100%;
+                width: 100%;
+
+                img {
+                    border-radius: 8px;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            
+
+        }
+    }
+}
