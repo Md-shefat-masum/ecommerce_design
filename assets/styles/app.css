@@ -943,4 +943,117 @@ nav .nav_body .action_menues ul li:has(.active) > a .svg_icon {
   color: var(--navy_blue);
 }
 
+#offers {
+  padding-bottom: 40px;
+}
+
+.offer_contents {
+  display: grid;
+  grid-template-columns: 1fr 444px;
+  gap: 24px;
+}
+.offer_contents .offer_btn {
+  position: absolute;
+  left: 66px;
+  bottom: 36px;
+  padding: 14px 32px;
+}
+.offer_contents .left .left_content {
+  padding: 25px;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 270px;
+  gap: 25px;
+  height: 100%;
+}
+.offer_contents .left .left_content .img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+.offer_contents .left .left_content .img img {
+  height: 100%;
+  width: 100%;
+  object-fit: unset;
+}
+.offer_contents .left .left_content .content_left {
+  position: relative;
+  z-index: 99;
+}
+.offer_contents .left .left_content .content_left .offer_title {
+  font-size: 24px;
+  margin-bottom: 60px;
+}
+.offer_contents .left .left_content .content_left .product_image img {
+  max-width: 380px;
+}
+.offer_contents .left .left_content .content_right {
+  position: relative;
+  z-index: 99;
+}
+.offer_contents .left .left_content .content_right .count_down {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 30px;
+}
+.offer_contents .left .left_content .content_right .count_down li {
+  padding: 8px;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid var(--black);
+  height: 46px;
+  width: 49px;
+}
+.offer_contents .left .left_content .content_right .count_down li .amount {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.offer_contents .left .left_content .content_right .count_down li .title {
+  font-size: 14px;
+}
+.offer_contents .left .left_content .content_right .offer_details_title {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.offer_contents .left .left_content .content_right .description {
+  font-size: 16px;
+  margin-bottom: 25px;
+}
+.offer_contents .right .right_content {
+  height: 444px;
+  width: 444px;
+  position: relative;
+}
+.offer_contents .right .right_content .img {
+  height: 100%;
+  width: 100%;
+}
+.offer_contents .right .right_content .img img {
+  border-radius: 8px;
+  height: 100%;
+  width: 100%;
+}
+
+.brand_list {
+  padding-bottom: 30px;
+}
+.brand_list .brand_logos {
+  display: flex;
+  gap: 24px;
+  padding: 60px 0px;
+}
+.brand_list .brand_logos .img {
+  display: flex;
+  justify-content: center;
+}
+.brand_list .brand_logos .img img {
+  height: 30px;
+  width: unset;
+  max-width: 100%;
+  object-fit: contain;
+}
+
 /*# sourceMappingURL=app.css.map */
