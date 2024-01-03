@@ -1,0 +1,16 @@
+.about_content{
+    background-color: gray;
+    display: flex;
+    
+    .left{
+        min-height: 300px;
+        min-width: 300px;
+        background-color: red;
+    }
+    .right{
+        min-height: 300px;
+        min-width: 300px;
+        background-color: yellowgreen;
+    }
+
+}
