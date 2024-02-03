@@ -10,6 +10,10 @@ footer {
             justify-content: space-between;
             gap: 30px;
 
+            @include custom_media(0px, 400px) {
+                grid-template-columns: repeat(auto-fit, 270px);
+            }
+
             .footer_item {
                 h3 {
                     color: var(--white);
@@ -80,6 +84,12 @@ footer {
                     display: flex;
                     justify-content: flex-end;
                     gap: 20px;
+
+                    @include custom_media(0px, 400px) {
+                        gap: 12px;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                    }
 
                     li {
                         a {
