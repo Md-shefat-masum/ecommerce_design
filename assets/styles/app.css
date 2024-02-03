@@ -1312,6 +1312,7 @@ footer .bottom .footer_bottom_content .right ul li a {
   margin: 0 auto;
   position: relative;
 }
+
 .blog_list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(315px, 315px));
