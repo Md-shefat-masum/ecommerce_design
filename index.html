@@ -60,7 +60,7 @@
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <nav>
             <div class="container">
                 <div class="nav_body">
@@ -421,7 +421,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="top_categories">
         <div class="container">
             <div x-data="" class="top_categories">
                 <template x-for="i in 6" x-key="i">
@@ -438,7 +438,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="top_sales_part">
         <div class="container">
             <div class="top_sales_part">
                 <div class="left">
@@ -586,7 +586,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="product_list">
         <div class="container">
             <div class="product_list">
                 <div class="section_heading">
@@ -712,7 +712,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="best_product_list">
         <div class="container">
             <div class="product_list">
                 <div class="section_heading">
@@ -778,7 +778,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="brand_part">
         <div class="container">
             <div class="section_heading">
                 <h2>Top Brands</h2>
@@ -826,7 +826,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="heighlighted_content">
         <div class="container">
             <div class="heighlighted_content">
                 <div class="shape"></div>
@@ -856,7 +856,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="blog_list">
         <div class="container">
             <div class="section_heading">
                 <h2>Our Blogs</h2>
@@ -905,7 +905,7 @@
         </div>
     </section>
 
-    <section>
+    <section id="our_features">
         <div class="container">
             <ul class="our_features">
                 <li>
@@ -970,7 +970,7 @@
         </div>
     </section>
 
-    <footer>
+    <footer id="footer">
         <div class="top">
             <div class="container">
                 <div class="footer_top_content">
@@ -1069,7 +1069,20 @@
                 autoplay: true,
                 autoplayHoverPause: true,
                 nav: true,
-                navText: [$('.top_sales_product_slide_prev'), $('.top_sales_product_slide_next')]
+                navText: [$('.top_sales_product_slide_prev'), $('.top_sales_product_slide_next')],
+                responsive : {
+                    // breakpoint from 0 up
+                    0 : {
+                        items: 3,
+                    },
+                    // breakpoint from 480 up
+                    480 : {
+                        items: 6,
+                    },
+                    // breakpoint from 768 up
+                    768 : {
+                    }
+                }
             });
             $(".brand_slide").owlCarousel({
                 items: 8,
@@ -1079,11 +1092,25 @@
                 autoplayHoverPause: true,
                 dosts: true,
                 nav: false,
+
+                responsive : {
+                    // breakpoint from 0 up
+                    0 : {
+                        items: 3,
+                    },
+                    // breakpoint from 480 up
+                    480 : {
+                        items: 6,
+                    },
+                    // breakpoint from 768 up
+                    768 : {
+                    }
+                }
             });
         });
 
         timezz(document.querySelector('.timer'), {
-            date: 'Feb 01, 2024 20:00:00',
+            date: 'Dec 01, 2024 20:00:00',
             pause: false,
             stopOnZero: true,
             beforeCreate() { },
