@@ -7,11 +7,20 @@
     grid-template-columns: 1fr 444px;
     gap: 24px;
 
+    @include xs(){
+        grid-template-columns: 1fr;
+    }
+
     .offer_btn {
         position: absolute;
         left: 66px;
         bottom: 36px;
         padding: 14px 32px;
+
+        @include xs(){
+            left: 86px;
+            bottom: -14px;
+        }
     }
 
     .left {
@@ -24,6 +33,10 @@
             grid-template-columns: 1fr 270px;
             gap: 25px;
             height: 100%;
+
+            @include xs(){
+                grid-template-columns: 1fr;
+            }
 
             .img {
                 position: absolute;
@@ -50,6 +63,11 @@
                 .product_image{
                     img{
                         max-width: 380px;
+
+                        @include xs(){
+                            max-width: unset;
+                            width: 225px;
+                        }
                     }
                 }
             }
@@ -62,6 +80,7 @@
                     display: flex;
                     gap: 8px;
                     margin-bottom: 30px;
+                    flex-wrap: wrap;
                     li{
                         padding: 8px;
                         border-radius: 8px;
@@ -82,6 +101,10 @@
                 .offer_details_title{
                     font-size: 20px;
                     margin-bottom: 10px;
+
+                    @include xs(){
+                        line-height: 30px;
+                    }
                 }
                 .description{
                     font-size: 16px;
@@ -99,6 +122,11 @@
             height: 444px;
             width: 444px;
             position: relative;
+
+            @include xs(){
+                height: unset;
+                width: unset;
+            }
 
             .img {
                 height: 100%;

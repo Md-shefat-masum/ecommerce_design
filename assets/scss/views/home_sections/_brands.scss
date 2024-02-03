@@ -1,9 +1,13 @@
 .brand_list{
     padding-bottom: 30px;
     .brand_logos{
-        display: flex;
-        gap: 24px;
+        // display: flex;
+        // gap: 24px;
         padding: 60px 0px;
+
+        @include xs(){
+            padding: 25px 0px;
+        }
 
         .img{
             display: flex;

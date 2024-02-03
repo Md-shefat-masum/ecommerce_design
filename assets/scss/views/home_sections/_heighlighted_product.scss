@@ -1,4 +1,4 @@
-.heighlighted_content{
+.heighlighted_content {
     margin-bottom: 60px;
     display: grid;
     grid-template-columns: 330px 1fr;
@@ -9,7 +9,12 @@
     position: relative;
     overflow: hidden;
 
-    .shape{
+    @include xs() {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .shape {
         width: 400px;
         height: 100%;
         position: absolute;
@@ -17,39 +22,60 @@
         top: 0;
         background-color: var(--secondary);
         clip-path: ellipse(75% 82% at 77% 51%);
+
+        @include xs() {
+            width: 100%;
+            height: calc(100% + -49px);
+            right: 0px;
+            top: unset;
+            transform: rotate(90deg);
+            bottom: -50%;
+        }
     }
 
-    .left{
+    .left {
         display: grid;
         align-content: center;
-        .l_content{
-            .heading{
+
+        .l_content {
+            .heading {
                 font-size: 44px;
                 text-transform: uppercase;
                 line-height: 54px;
                 color: var(--white);
+                @include xs(){
+                    font-size: 23px;
+                }
             }
-            p{
+
+            p {
                 font-size: 24px;
                 line-height: 34px;
                 color: var(--white);
                 margin-top: 20px;
                 margin-bottom: 40px;
+
+                @include xs(){
+                    font-size: 20px;
+                }
             }
-            .btns{
+
+            .btns {
                 // padding-left: 129px;
                 text-align: center;
             }
         }
     }
-    .right{
-        
-        
-        .img{
+
+    .right {
+
+
+        .img {
             max-width: 500px;
             margin: 0 auto;
             position: relative;
-            img{}
+
+            img {}
         }
     }
 }

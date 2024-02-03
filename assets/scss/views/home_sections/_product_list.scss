@@ -4,11 +4,19 @@
     gap: 24px;
     padding-bottom: 48px;
 
+    @include xs(){
+        grid-template-columns: 1fr;
+    }
+
     .product_item_2 {
         max-width: 255px;
         box-shadow: -2px 2px 15px -1px rgba(113, 113, 113, 0.12);
         padding: 16px;
         display: grid;
+
+        @include xs(){
+            max-width: unset;
+        }
 
         .top {
             position: relative;
