@@ -64,21 +64,38 @@
         <nav>
             <div class="container">
                 <div class="nav_body">
+                    <div class="nav_toggler" onclick="tooggle_nav()">
+                        <button>
+                            <i class="fa fa-align-left"></i>
+                        </button>
+                    </div>
                     <div class="logo">
                         <img src="./assets/images/logo/logo.svg" alt="">
                     </div>
-                    <div class="menu">
-                        <ul>
-                            <li><a href="#">Home</a></li>
-                            <li>
-                                <a href="#" onclick="product_category_jumbo_menu.classList.toggle('active')">
-                                    Products
-                                </a>
-                            </li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Faq</a></li>
-                            <li><a href="#">Contact</a></li>
-                        </ul>
+                    <div class="menu" id="nav_bar_menu">
+                        <div class="overlay">
+                            <ul>
+                                <li class="nav_logo">
+                                    <a href="/">
+                                        <img src="./assets/images/logo/logo.svg" alt="">
+                                    </a>
+                                </li>
+                                <li class="nav_close" onclick="tooggle_nav()">
+                                    <a href="#">
+                                        <i class="fa fa-close"></i>
+                                    </a>
+                                </li>
+                                <li><a href="/">Home</a></li>
+                                <li>
+                                    <a href="#" onclick="product_category_jumbo_menu.classList.toggle('active')">
+                                        Products
+                                    </a>
+                                </li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Faq</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="action_menues">
                         <ul>
@@ -289,7 +306,6 @@
                                         </a>
                                     </li>
                                 </ul>
-
                             </div>
                             <div class="top_products">
                                 <div class="close">
@@ -1073,14 +1089,15 @@
                 responsive : {
                     // breakpoint from 0 up
                     0 : {
-                        items: 3,
+                        items: 1,
                     },
                     // breakpoint from 480 up
                     480 : {
-                        items: 6,
+                        items: 3,
                     },
                     // breakpoint from 768 up
                     768 : {
+                        items: 5,
                     }
                 }
             });
