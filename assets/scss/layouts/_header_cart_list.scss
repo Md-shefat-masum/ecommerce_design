@@ -13,6 +13,11 @@
     z-index: 9;
     display: none;
 
+    @include custom_media(0px, 991.9px){
+        width: 100vw;
+        right: calc(0px - 68px);
+    }
+
     &.active{
         display: block;
     }
@@ -42,12 +47,27 @@
                 gap: 25px;
                 align-items: center;
 
+                @include xs(){
+                    flex-direction: column;
+                }
+                @include sm(){
+                    flex-direction: column;
+                }
+
                 .img {
                     width: 145px;
                 }
 
                 .content {
                     width: calc(100% - 170px);
+
+                    @include xs(){
+                        width: 100%;
+                    }
+                    @include sm(){
+                        width: 100%;
+                    }
+
                     .product_name,
                     .size {
                         font-size: 15px;
