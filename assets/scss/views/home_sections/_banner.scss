@@ -1,25 +1,48 @@
 // #banner{}
-.banner_content{
+.banner_content {
     display: grid;
     grid-template-columns: 500px 1fr;
-    .left{
-        .heading{
+
+    @include xs() {
+        display: block;
+    }
+
+    .left {
+        .heading {
             font-size: 64px;
             color: var(--navy_blue);
             margin-top: 56px;
+
+            @include xs() {
+                font-size: 40px;
+                line-height: 50px;
+            }
         }
-        .sub_heading{
+
+        .sub_heading {
             font-size: 32px;
             color: var(--navy_blue);
             margin-top: 50px;
             margin-bottom: 110px;
-            span{
+
+            @include xs() {
+                margin-top: 17px;
+                margin-bottom: 25px;
+            }
+
+            span {
                 color: var(--secondary);
             }
         }
 
-        .banner_btn{
+        .banner_btn {
             padding: 19px 95px;
+        }
+    }
+
+    .right{
+        @include xs(){
+            padding-top: 40px;
         }
     }
 }
