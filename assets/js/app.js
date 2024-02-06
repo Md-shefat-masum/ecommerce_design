@@ -93,3 +93,10 @@ function decrement_cart(price_target){
 function change_product_preview_image(target, image_src){
     document.getElementById(target).src = image_src;
 }
+
+function tooggle_nav(){
+    let nav_bar_menu = document.getElementById('nav_bar_menu');
+    if(nav_bar_menu){
+        nav_bar_menu.classList.toggle('active');
+    }
+}
