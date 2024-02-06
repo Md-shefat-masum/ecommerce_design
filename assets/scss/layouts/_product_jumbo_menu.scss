@@ -8,13 +8,14 @@
     width: 100vw;
     top: 103px;
 
-    &.active{
+    &.active {
         opacity: 1;
         visibility: visible;
     }
 
     .product_list_menu {
         border-top: 1px solid var(--primary);
+
         .overlay {
             background-color: var(--white);
             border-bottom-left-radius: 5px;
@@ -96,11 +97,13 @@
 
                     .top_products {
                         flex: 1;
-                        .close{
+
+                        .close {
                             text-align: right;
                             padding-top: 10px;
                             padding-right: 10px;
-                            a{
+
+                            a {
                                 background-color: var(--primary);
                                 color: white;
                                 padding: 10px 15px;
@@ -108,11 +111,13 @@
                                 margin-bottom: 3px;
                             }
                         }
+
                         .nav_product_items {
                             display: flex;
                             gap: 16px;
                             justify-content: flex-end;
                             padding: 24px;
+
                             .nav_product {
                                 width: 150px;
                                 padding: 8px;
@@ -139,4 +144,45 @@
         }
     }
 
+
+    /* responsive */
+
+    @include custom_media(0px, 991.9px){
+        z-index: 9999;
+    
+        .product_list_menu {
+            .overlay {
+                max-width: 400px;
+                width: 100%;
+    
+                .product_categories {
+                    flex-direction: column;
+    
+                    .category_list {
+                        padding-bottom: 0;
+                        border-right: 0px;
+                    }
+    
+                    .subcategory_list {
+                        flex-direction: column;
+                        flex: unset;
+    
+                        .subcategories {
+                            padding-top: 0;
+                        }
+    
+                        .top_products {
+                            .nav_product_items {
+                                display: none;
+                            }
+    
+                            .close {
+                                text-align: center;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
