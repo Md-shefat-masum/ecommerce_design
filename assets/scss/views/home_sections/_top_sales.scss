@@ -10,6 +10,11 @@
     background-size: 382px;
     background-repeat: no-repeat;
     background-blend-mode: soft-light;
+    
+    @include xs(){
+        display: block;
+        grid-template-columns: 1fr;
+    }
 
     .left {
         color: var(--white);
@@ -46,10 +51,14 @@
         padding-top: 56px;
         padding-right: 10px;
 
-        .product_list {
-            // display: grid;
-            // grid-template-columns: repeat(auto-fit, minmax(184px, 1fr));
-            // gap: 24px;
+        // .product_list {
+        //     // display: grid;
+        //     // grid-template-columns: repeat(auto-fit, minmax(184px, 1fr));
+        //     // gap: 24px;
+        // }
+
+        @include xs(){
+            padding-left: 10px;
         }
 
         .navigation {
