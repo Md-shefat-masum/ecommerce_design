@@ -11,6 +11,20 @@
         grid-template-columns: 1fr;
     }
 
+    @include sm(){
+        grid-template-columns: 1fr;
+    }
+
+    @include md(){
+        grid-template-columns: 1fr;
+    }
+    @include lg(){
+        grid-template-columns: 1fr;
+    }
+    @include xl(){
+        grid-template-columns: 1fr 420px;
+    }
+
     .offer_btn {
         position: absolute;
         left: 66px;
@@ -20,6 +34,15 @@
         @include xs(){
             left: 86px;
             bottom: -14px;
+        }
+
+        @include sm(){
+            left: 86px;
+            bottom: -14px;
+        }
+
+        @include md(){
+            bottom: 0;
         }
     }
 
@@ -36,6 +59,18 @@
 
             @include xs(){
                 grid-template-columns: 1fr;
+            }
+
+            @include sm(){
+                grid-template-columns: 1fr;
+            }
+
+            @include xl(){
+                grid-template-columns: 253px 367px;
+            }
+
+            @include xxl(){
+                grid-template-columns: 1fr 385px;
             }
 
             .img {
@@ -67,6 +102,15 @@
                         @include xs(){
                             max-width: unset;
                             width: 225px;
+                        }
+
+                        @include sm(){
+                            max-width: unset;
+                            width: 225px;
+                        }
+
+                        @include xl(){
+                            max-width: 100%;
                         }
                     }
                 }
@@ -105,6 +149,10 @@
                     @include xs(){
                         line-height: 30px;
                     }
+
+                    @include sm(){
+                        line-height: 30px;
+                    }
                 }
                 .description{
                     font-size: 16px;
@@ -128,6 +176,11 @@
                 width: unset;
             }
 
+            @include sm(){
+                height: unset;
+                width: unset;
+            }
+
             .img {
                 height: 100%;
                 width: 100%;
@@ -138,8 +191,6 @@
                     width: 100%;
                 }
             }
-
-            
 
         }
     }
