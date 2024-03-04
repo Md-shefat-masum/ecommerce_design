@@ -8,6 +8,17 @@
         grid-template-columns: 1fr;
     }
 
+    @include sm(){
+        grid-template-columns: repeat(auto-fit, minmax(95px, 240px));
+    }
+    
+    @include md(){
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    }
+    @include lg(){
+        grid-template-columns: repeat(auto-fit, minmax(215px, 1fr));
+    }
+
     .product_item_2 {
         max-width: 255px;
         box-shadow: -2px 2px 15px -1px rgba(113, 113, 113, 0.12);
