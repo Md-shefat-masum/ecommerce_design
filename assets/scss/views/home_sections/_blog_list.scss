@@ -9,11 +9,28 @@
         grid-template-columns: 1fr;
     }
 
+    @include sm(){
+        grid-template-columns: repeat(auto-fit, minmax(247px, 1fr));
+    }
+
+    @include md(){
+        grid-template-columns: repeat(auto-fit, minmax(315px, 1fr));
+    }
+
+    @include lg(){
+        grid-template-columns: repeat(auto-fit, minmax(295px, 1fr));
+    }
+
+    @include xl(){
+        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    }
+
     .blog_item{
         border-radius: 8px;
-        overflow: hidden;
         box-shadow: -2px 2px 15px -1px rgba(113, 113, 113, 0.12);
+        overflow: hidden;
         .top{
+            overflow: hidden;
             margin-bottom: 12px;
             height: 210px;
         }
