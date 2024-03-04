@@ -8,6 +8,10 @@
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
 
+    @include sm(){
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    }
+
     .item {
         padding: 8px 18px;
         background-color: var(--white);
