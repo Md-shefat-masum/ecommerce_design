@@ -66,6 +66,10 @@ footer {
         background-color: #021736;
         padding: 16px;
 
+        @include md(){
+            padding: 14px;
+        }
+
         .footer_bottom_content {
             display: flex;
             justify-content: space-between;
