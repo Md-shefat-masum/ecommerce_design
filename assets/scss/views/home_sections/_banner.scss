@@ -6,6 +6,13 @@
     @include xs() {
         display: block;
     }
+    @include sm() {
+        display: block;
+    }
+
+    @include md(){
+        grid-template-columns: 370px 1fr;
+    }
 
     .left {
         .heading {
@@ -17,6 +24,13 @@
                 font-size: 40px;
                 line-height: 50px;
             }
+
+            @include sm() {
+                font-size: 40px;
+                line-height: 50px;
+            }
+
+            
         }
 
         .sub_heading {
@@ -28,6 +42,15 @@
             @include xs() {
                 margin-top: 17px;
                 margin-bottom: 25px;
+            }
+
+            @include sm() {
+                margin-top: 17px;
+                margin-bottom: 25px;
+            }
+
+            @include md(){
+                margin-top: 0;
             }
 
             span {
@@ -43,6 +66,26 @@
     .right{
         @include xs(){
             padding-top: 40px;
+        }
+
+        @include sm(){
+            padding-top: 40px;
+        }
+
+        @include md(){
+            padding-top: 70px;
+        }
+
+        @include lg(){
+            padding-top: 70px;
+        }
+
+        @include xl(){
+            padding-top: 20px;
+        }
+
+        @include xxl(){
+            padding-top: 20px;
         }
     }
 }
