@@ -986,6 +986,12 @@
         </div>
     </section>
 
+    <section>
+        <div class="container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3650.246507971446!2d90.35893571150564!3d23.809831778540698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c1670cdb1779%3A0x645bbf4f0aeb1d56!2sTech%20Park%20IT!5e0!3m2!1sen!2sbd!4v1709579360443!5m2!1sen!2sbd" style="border:0;height: 300px; width: 100%; padding: 20px 0px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
     <footer id="footer">
         <div class="top">
             <div class="container">
@@ -1093,12 +1099,18 @@
                     },
                     // breakpoint from 480 up
                     480 : {
-                        items: 3,
+                        items: 1,
                     },
                     // breakpoint from 768 up
                     768 : {
+                        items: 2,
+                    },
+                    992 : {
+                        items: 3,
+                    },
+                    1200 : {
                         items: 5,
-                    }
+                    },
                 }
             });
             $(".brand_slide").owlCarousel({
