@@ -13,7 +13,22 @@
     
     @include xs(){
         display: block;
-        grid-template-columns: 1fr;
+    }
+
+    @include sm(){
+        display: block;
+    }
+
+    @include md(){
+        grid-template-columns: 290px 400px;
+    }
+
+    @include lg(){
+        grid-template-columns: 290px 610px;
+    }
+
+    @include xl(){
+        grid-template-columns: 290px 823px;
     }
 
     .left {
@@ -58,6 +73,10 @@
         // }
 
         @include xs(){
+            padding-left: 10px;
+        }
+
+        @include sm(){
             padding-left: 10px;
         }
 
