@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO META -->
+    <link rel="shortcut icon" type="image/x-icon" href="https://md-shefat-masum.github.io/ecommerce_design/fabicon.jpg">
+    <meta name="robots" content="index, follow">
+    <!-- <meta http-equiv="refresh" content="5"> -->
+
+    <meta name="logo" content="https://md-shefat-masum.github.io/ecommerce_design/assets/images/logo.png">
+    <meta name="Classification" content="Website">
+    <meta name="identifier-URL" content="https://md-shefat-masum.github.io/ecommerce_design/">
+    <meta name="directory" content="submission">
+    <meta name="category" content="Internet">
+    <meta name="coverage" content="Worldwide">
+    <meta name="distribution" content="Global">
+    <meta name="rating" content="General">
+    <meta name="target" content="all">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="author" content="">
+    <meta name="developer" content="">
+    <meta name="developer-email" content="">
+    <meta name="developer-company" content="">
+    <meta name="copyright" content="https://md-shefat-masum.github.io/ecommerce_design/">
+    <meta name="price" content="Call for price - ">
+
+    <meta name="keywords" content="portfolio website, responsive website">
+    <meta name="description" content="this is a Ecommerce website">
+
+    <meta property="og:title" content="Ecommerce" />
+    <meta property="og:site_name" content="Ecommerce" />
+    <meta property="og:description" content="" />
+    <meta property="og:type" content="Website" />
+    <meta property="og:url" content="https://md-shefat-masum.github.io/ecommerce_design/" />
+    <meta property="og:image" content="https://md-shefat-masum.github.io/ecommerce_design/mockup/1.jpg" />
+    <meta property="og:image:width" content="400" />
+    <meta property="og:image:height" content="400" />
+
+    <meta name="twitter:title" content="Ecommerce">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="https://md-shefat-masum.github.io/ecommerce_design/mockup/1.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="fabicon" type="image/png" sizes="16x16" href="https://techparkit.org/favicon.png">
+
+    <title>Ecommerce | Laptop</title>
+    <link rel="stylesheet" href="../assets/fonts/google_icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="../assets/plugins/owl_carousel/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/plugins/owl_carousel/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="../assets/styles/app.css">
+    <script src="../assets/js/app.js"></script>
+</head>
+
+<body>
+    <header id="header">
+        <nav>
+            <div class="container">
+                <div class="nav_body">
+                    <div class="nav_toggler" onclick="tooggle_nav()">
+                        <button>
+                            <i class="fa fa-align-left"></i>
+                        </button>
+                    </div>
+                    <div class="logo">
+                        <img src="../assets/images/logo/logo.svg" alt="">
+                    </div>
+                    <div class="menu" id="nav_bar_menu">
+                        <div class="overlay">
+                            <ul>
+                                <li class="nav_logo">
+                                    <a href="/">
+                                        <img src="../assets/images/logo/logo.svg" alt="">
+                                    </a>
+                                </li>
+                                <li class="nav_close" onclick="tooggle_nav()">
+                                    <a href="#">
+                                        <i class="fa fa-close"></i>
+                                    </a>
+                                </li>
+                                <li><a href="/">Home</a></li>
+                                <li>
+                                    <a href="#" onclick="product_category_jumbo_menu.classList.toggle('active')">
+                                        Products
+                                    </a>
+                                </li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Faq</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="action_menues">
+                        <ul>
+                            <li>
+                                <a onclick="event.preventDefault(); search_modal.classList.toggle('active');" href="#">
+                                    <div class="svg_icon" style="-webkit-mask-image: url('../assets/images/icons/search.svg');
+                                    mask-image: url('../assets/images/icons/search.svg');"></div>
+                                </a>
+
+                            </li>
+                            <li>
+                                <a href="#" onclick="cart_items.classList.toggle('active')">
+                                    <div class="svg_icon" style="-webkit-mask-image: url('../assets/images/icons/cart.svg');
+                                    mask-image: url('../assets/images/icons/cart.svg');"></div>
+                                    <div class="cart_amount">3</div>
+                                </a>
+
+                                <div class="cart_items" id="cart_items">
+                                    <div class="top">
+                                        <h3 class="cart_top_title">3 items</h3>
+                                    </div>
+                                    <div class="mid">
+                                        <div x-data="{header_cart_products}" class="cart_item_list">
+                                            <template x-for="(i, index) in header_cart_products">
+                                                <div class="cart_item">
+                                                    <div class="img">
+                                                        <img x-bind:src="`../assets/images/dummy_product/${i.image_no}.jpg`"
+                                                            alt="">
+                                                    </div>
+                                                    <div class="content">
+                                                        <h3 class="product_name" x-text="i.name"></h3>
+                                                        <h2 class="size">13.3 inch</h2>
+                                                        <h4 class="color">black</h4>
+                                                        <div class="qty">
+                                                            × 1
+                                                        </div>
+
+                                                        <div class="extra_features">
+                                                            <ul>
+                                                                <li>
+                                                                    <div class="svg_icon" style="-webkit-mask-image: url('../assets/images/icons/van.svg');
+                                                                    mask-image: url('../assets/images/icons/van.svg');">
+                                                                    </div>
+                                                                    <div>
+                                                                        free delivery
+                                                                    </div>
+                                                                </li>
+                                                                <li>
+                                                                    <div class="svg_icon"
+                                                                        style="-webkit-mask-image: url('../assets/images/icons/badge.svg');
+                                                                    mask-image: url('../assets/images/icons/badge.svg');"></div>
+                                                                    <div>
+                                                                        guaranted
+                                                                    </div>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+
+                                                        <div class="qty_changer">
+                                                            <div class="price">
+                                                                $<span x-bind:id="`price_${index}`"
+                                                                    x-bind:data-price="i.price" x-text="i.price"></span>
+                                                            </div>
+                                                            <div class="qty_updater">
+                                                                <button class="delete_cart">
+                                                                    <div class="svg_icon"
+                                                                        style="-webkit-mask-image: url('../assets/images/icons/trash.svg');
+                                                                    mask-image: url('../assets/images/icons/trash.svg');"></div>
+                                                                </button>
+                                                                <div class="qty_input">
+                                                                    <button @click="decrement_cart(`price_${index}`)">
+                                                                        <div class="svg_icon"
+                                                                            style="-webkit-mask-image: url('../assets/images/icons/minus.svg');
+                                                                        mask-image: url('../assets/images/icons/minus.svg');"></div>
+                                                                    </button>
+                                                                    <input type="number" value="1" min="1">
+                                                                    <button @click="increment_cart(`price_${index}`)">
+                                                                        <div class="svg_icon"
+                                                                            style="-webkit-mask-image: url('../assets/images/icons/plus.svg');
+                                                                        mask-image: url('../assets/images/icons/plus.svg');"></div>
+                                                                    </button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </template>
+                                        </div>
+                                    </div>
+                                    <div class="bottom">
+                                        <div class="left">
+                                            <h5 class="title">Total</h5>
+                                            <h4 class="amount">$543.02</h4>
+                                        </div>
+                                        <div class="right">
+                                            <a href="#">
+                                                <span class="title">
+                                                    Proceed to Cart
+                                                </span>
+                                                <div class="svg_icon" style="-webkit-mask-image: url('../assets/images/icons/cart.svg');
+                                                    mask-image: url('../assets/images/icons/cart.svg');"></div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#" onclick="user_drop_down_actions.classList.toggle('active')">
+                                    <div class="svg_icon" style="-webkit-mask-image: url('../assets/images/icons/profile.svg');
+                                    mask-image: url('../assets/images/icons/profile.svg');"></div>
+                                </a>
+                                <div id="user_drop_down_actions" class="user_drop_down_actions">
+                                    <ul>
+                                        <li>
+                                            <a href="">
+                                                <div class="icon">
+                                                    <div class="svg_icon" style="-webkit-mask-image: url('../assets/images/icons/profile_circle.svg');
+                                                    mask-image: url('../assets/images/icons/profile_circle.svg');">
+                                                    </div>
+                                                </div>
+                                                <div class="content">
+                                                    <h4 class="block">Mr. Shefat</h4>
+                                                    <p>mshefat924@gmail.com</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <div class="icon">
+                                                    <div class="svg_icon" style="-webkit-mask-image: url('../assets/images/icons/bag.svg');
+                                                    mask-image: url('../assets/images/icons/bag.svg');">
+                                                    </div>
+                                                </div>
+                                                <div class="content">
+                                                    <h4>Orders</h4>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <div class="icon">
+                                                    <div class="svg_icon" style="-webkit-mask-image: url('../assets/images/icons/heart.svg');
+                                                    mask-image: url('../assets/images/icons/heart.svg');">
+                                                    </div>
+                                                </div>
+                                                <div class="content">
+                                                    <h4>Wish List</h4>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <div class="icon">
+                                                    <div class="svg_icon" style="-webkit-mask-image: url('../assets/images/icons/logout.svg');
+                                                    mask-image: url('../assets/images/icons/logout.svg');">
+                                                    </div>
+                                                </div>
+                                                <div class="content">
+                                                    <h4>Logout</h4>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="product_category_jumbo_menu" class="">
+        <div class="container">
+            <div class="product_list_menu">
+                <div class="overlay">
+                    <div class="product_categories">
+                        <div class="category_list">
+                            <ul x-data="{product_categories}">
+                                <template x-for="category in product_categories">
+                                    <li>
+                                        <a href="#">
+                                            <div class="svg_icon"
+                                                x-bind:style="`-webkit-mask-image: url('${category.icon}');mask-image: url('${category.icon}');`">
+                                            </div>
+                                            <span class="text" x-text="category.name"></span>
+                                        </a>
+                                    </li>
+                                </template>
+                            </ul>
+                        </div>
+                        <div class="subcategory_list">
+                            <div class="subcategories">
+                                <ul x-data="{product_categories}">
+                                    <template x-for="category in product_categories">
+                                        <li>
+                                            <a href="#">
+                                                <div class="svg_icon"
+                                                    x-bind:style="`-webkit-mask-image: url('${category.icon}');mask-image: url('${category.icon}');`">
+                                                </div>
+                                                <span class="text" x-text="category.name"></span>
+                                            </a>
+                                        </li>
+                                    </template>
+                                    <li>
+                                        <a href="#" class="view_all">
+                                            view all
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="top_products">
+                                <div class="close">
+                                    <a href="#"
+                                        onclick="product_category_jumbo_menu.classList.toggle('active')">colse</a>
+                                </div>
+                                <div x-data="{jumbo_menu_products}" class="nav_product_items">
+                                    <template x-for="product in jumbo_menu_products">
+                                        <div class="nav_product">
+                                            <img x-bind:src="'.'+product.image" alt="product-image">
+                                            <a href="#">
+                                                <h4 x-text="product.name"></h4>
+                                            </a>
+                                        </div>
+                                    </template>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="search_modal">
+        <div class="search_overlay">
+            <div class="search_card" x-data="{searh_key: ``}">
+                <div class="top">
+                    <form class="search_form" action="#">
+                        <div class="search_input">
+                            <input x-model="searh_key" placeholder="search your product" class="input" type="text">
+                            <button class="submit_btn">
+                                <div class="svg_icon"
+                                    style="-webkit-mask-image: url('../assets/images/icons/search.svg');mask-image: url('../assets/images/icons/search.svg');">
+                                </div>
+                            </button>
+                        </div>
+                        <div class="icon_part">
+                            <div class="close"
+                                onclick="event.preventDefault(); search_modal.classList.toggle('active');">
+                                <div class="svg_icon"
+                                    style="-webkit-mask-image: url('../assets/images/icons/close.svg');mask-image: url('../assets/images/icons/close.svg');">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="bottom">
+                    <div x-show="searh_key.length == 0" class="suggested_keywords">
+                        <div class="keyword_group">
+                            <h3 class="heading">The Most Searched Items</h3>
+                            <ul class="link_list" x-data="{search_keywords}">
+                                <template x-for="skeyword in search_keywords">
+                                    <li>
+                                        <a href="#" x-text="skeyword"></a>
+                                    </li>
+                                </template>
+                            </ul>
+                        </div>
+                        <div class="keyword_group">
+                            <h3 class="heading">The Most Searched Items</h3>
+                            <ul class="link_list" x-data="{search_keywords}">
+                                <template x-for="skeyword in search_keywords">
+                                    <li>
+                                        <a href="#" x-text="skeyword"></a>
+                                    </li>
+                                </template>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div x-show="searh_key.length > 0" class="suggested_result">
+                        <div class="left">
+                            <h4 class="search_at_a_glance">view 17 out of 30 results</h4>
+                            <div class="result_list">
+                                <ul x-data="{}">
+                                    <template x-for="i in 18">
+                                        <li>
+                                            <a href="#">
+                                                <span x-text="i"></span>
+                                                iphone
+                                                <span class="search_match" x-text="searh_key"></span>
+                                            </a>
+                                        </li>
+                                    </template>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="match_products">
+                                <div x-data="{jumbo_menu_products}" class="product_items">
+                                    <template x-for="product in jumbo_menu_products">
+                                        <div class="nav_product">
+                                            <div class="img">
+                                                <img x-bind:src="'.'+product.image" alt="product-image">
+                                            </div>
+                                            <a href="#">
+                                                <h4 class="product_title" x-text="product.name"></h4>
+                                            </a>
+                                        </div>
+                                    </template>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="bread_cumb">
+        <div class="container">
+            <ul>
+                <li>
+                    <a href="#">Home</a>
+                </li>
+                <li>
+                    <a href="#">Laptop</a>
+                </li>
+                <li>
+                    <a href="#">Dell</a>
+                </li>
+                <li>
+                    <a href="#">Core i5</a>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- page conent start -->
+
+    
+    <!-- page conent end -->
+
+
+    <footer id="footer">
+        <div class="top">
+            <div class="container">
+                <div class="footer_top_content">
+                    <div class="footer_item">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="#">about us</a></li>
+                            <li><a href="#">contact</a></li>
+                            <li><a href="#">latest products</a></li>
+                            <li><a href="#">blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_item">
+                        <h3>Info</h3>
+                        <ul>
+                            <li><a href="#">Our services</a></li>
+                            <li><a href="#">Faq</a></li>
+                            <li><a href="#">How we work</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_item">
+                        <h3>Contact us</h3>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-phone"></i>
+                                    <span>+880 1223435453</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-envelope"></i>
+                                    <span>mijan@gmail.com</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-location-pin"></i>
+                                    <span>mirpur 10, lane no 2, prosikha mor</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer_item">
+                        <h3>Sign up for News and updates</h3>
+                        <ul>
+                            <li>
+                                <form action="" class="subscribe_form">
+                                    <i class="fa fa-user icon"></i>
+                                    <input placeholder="E-mail Address" class="input" type="text">
+                                    <button class="button">
+                                        <i class="fa fa-angle-right"></i>
+                                    </button>
+                                </form>
+                            </li>
+                        </ul>
+                        <ul class="s_icons">
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="container">
+                <div class="footer_bottom_content">
+                    <div class="left">
+                        <p>
+                            &copy; 2023 hungry coder. 
+                        </p>
+                    </div>
+                    <div class="right">
+                        <ul>
+                            <li><a href="#">cookie settings</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms and Conditions </a></li>
+                            <li><a href="#">Imprint </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/plugins/alpine.js"></script>
+</body>
+
+</html>
