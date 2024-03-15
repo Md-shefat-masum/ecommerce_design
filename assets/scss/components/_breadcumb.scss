@@ -1,0 +1,37 @@
+.bread_cumb_content{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 28px 0px;
+
+    li{
+        a{
+            font-family: var(--inter);
+            font-size: 18px;
+            line-height: 18px;
+            position: relative;
+            color: var(--black);
+            text-transform: capitalize;
+
+            &::after{
+                content: "\f105";
+                font-family: var(--fa-style-family, "Font Awesome 6 Free");
+                font-weight: 900;
+                position: absolute;
+                right: -18px;
+                font-size: 14px;
+                line-height: 19px;
+            }
+        }
+
+        &:last-child{
+            a{
+                color: var(--primary);
+                text-decoration: underline;
+                &::after{
+                    content: '';
+                }
+            }
+        }
+    }
+}
