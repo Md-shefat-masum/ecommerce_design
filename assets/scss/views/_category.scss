@@ -1,0 +1,80 @@
+.category_page_sub_category_list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(74px, 90px));
+    gap: 40px;
+    justify-content: center;
+    padding: 40px 0px;
+
+    .item {
+        // border: 1px solid var(--border);
+        border: 1px solid rgb(240, 240, 240);
+        &.active{
+            border-bottom: 2px solid var(--primary);
+        }
+
+        &:hover{
+            .inner_div1{
+                &::after{
+                    background-color: var(--primary);
+                    animation: rotate 3s linear infinite;
+                }
+            }
+        }
+
+        .inner_div1{
+            padding: 2px;
+            position: relative;
+            overflow: hidden;
+
+            &::after{
+                content: '';
+                position: absolute;
+                height: 130%;
+                width: 50%;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                z-index: 1;
+                transition-duration: .3s;
+            }
+
+            @keyframes rotate {
+                from{
+                    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+                }
+                to{
+                    transform: translateX(-50%) translateY(-50%) rotate(360deg);
+                }
+            }
+            .inner_div2{
+                background-color: white;
+                position: relative;
+                z-index: 10;
+            }
+        }
+        a {
+            display: block;
+
+            .img {
+                height: 48px;
+                width: 48px;
+                border-radius: 10px;
+                overflow: hidden;
+                margin: auto;
+
+                img {
+                    height: 100%;
+                    width: 100%;
+                    object-position: center;
+                }
+            }
+
+            .title {
+                font-size: 20px;
+                line-height: 28px;
+                text-align: center;
+                padding-top: 16px;
+            }
+        }
+    }
+}
