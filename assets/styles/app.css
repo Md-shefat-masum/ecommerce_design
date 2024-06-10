@@ -593,6 +593,7 @@ nav .nav_body .action_menues ul li:has(.active) > a .svg_icon {
   position: fixed;
   width: 100vw;
   top: 103px;
+  z-index: 20;
   /* responsive */
 }
 #product_category_jumbo_menu.active {
@@ -1871,6 +1872,74 @@ footer .bottom .footer_bottom_content .right ul li a {
   display: flex;
   align-items: center;
   gap: 15px;
+}
+
+.category_page_sub_category_list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(74px, 90px));
+  gap: 40px;
+  justify-content: center;
+  padding: 40px 0px;
+}
+.category_page_sub_category_list .item {
+  border: 1px solid rgb(240, 240, 240);
+}
+.category_page_sub_category_list .item.active {
+  border-bottom: 2px solid var(--primary);
+}
+.category_page_sub_category_list .item:hover .inner_div1::after {
+  background-color: var(--primary);
+  animation: rotate 3s linear infinite;
+}
+.category_page_sub_category_list .item .inner_div1 {
+  padding: 2px;
+  position: relative;
+  overflow: hidden;
+}
+.category_page_sub_category_list .item .inner_div1::after {
+  content: "";
+  position: absolute;
+  height: 130%;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  z-index: 1;
+  transition-duration: 0.3s;
+}
+@keyframes rotate {
+  from {
+    transform: translateX(-50%) translateY(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) translateY(-50%) rotate(360deg);
+  }
+}
+.category_page_sub_category_list .item .inner_div1 .inner_div2 {
+  background-color: white;
+  position: relative;
+  z-index: 10;
+}
+.category_page_sub_category_list .item a {
+  display: block;
+}
+.category_page_sub_category_list .item a .img {
+  height: 48px;
+  width: 48px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin: auto;
+}
+.category_page_sub_category_list .item a .img img {
+  height: 100%;
+  width: 100%;
+  object-position: center;
+}
+.category_page_sub_category_list .item a .title {
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+  padding-top: 16px;
 }
 
 /*# sourceMappingURL=app.css.map */
