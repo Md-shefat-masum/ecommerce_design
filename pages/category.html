@@ -132,7 +132,8 @@
                                                         <div class="extra_features">
                                                             <ul>
                                                                 <li>
-                                                                    <div class="svg_icon" style="-webkit-mask-image: url('../assets/images/icons/van.svg');
+                                                                    <div class="svg_icon"
+                                                                        style="-webkit-mask-image: url('../assets/images/icons/van.svg');
                                                                     mask-image: url('../assets/images/icons/van.svg');">
                                                                     </div>
                                                                     <div>
@@ -433,6 +434,34 @@
 
     <!-- page conent start -->
 
+    <!-- category list start -->
+    <section>
+        <div class="container">
+            <div x-data="" class="category_page_sub_category_list">
+
+                <template x-for="i in 5" x-key="i">
+                    <div x-bind:class="`item ${i==3 ? 'active': ''}`">
+                        <div class="inner_div1">
+                            <div class="inner_div2">
+                                <a href="#">
+                                    <div class="img">
+                                        <img src="https://cdn1.arogga.com/eyJidWNrZXQiOiJhcm9nZ2EiLCJrZXkiOiJUYXhvbm9teS10X2Jhbm5lclwvNzMyNVwvNzMyNS1EZXNzZXQtSWNvbi0zdDBmNDAucG5nIiwiZWRpdHMiOltdfQ=="
+                                            alt="category image">
+                                    </div>
+                                    <div class="title">
+                                        dessert
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+
+            </div>
+        </div>
+    </section>
+    <!-- category list end -->
+
 
     <!-- page conent end -->
 
@@ -510,7 +539,7 @@
                 <div class="footer_bottom_content">
                     <div class="left">
                         <p>
-                            &copy; 2023 hungry coder. 
+                            &copy; 2023 hungry coder.
                         </p>
                     </div>
                     <div class="right">
