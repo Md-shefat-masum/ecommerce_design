@@ -4,21 +4,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>learn java script</title>
 </head>
 
 <body>
 
-    <input class="input_box" onkeyup="output.innerText=this.value.toUpperCase()" type="text">
+    <div>
+        <h4>type number 1</h4>
+        <input id="my_input1" type="text">
+    </div>
+    <div>
+        <h4>type number 2</h4>
+        <input id="my_input2" type="text">
+    </div>
 
-    <p class="name_list">
-        <span onclick="output.innerText=this.innerText">mijan</span>
-        <span onclick="output.innerText=this.innerText">farid</span>
-        <span onclick="output.innerText=this.innerText">bipul</span>
-        <span onclick="output.innerText=this.innerText">shefat</span>
-    </p>
 
-    <h4 class="output" style="padding: 10px;border: 1px solid red;"></h4>
+    <div>
+        <br>
+        <button id="add">
+            +
+        </button>
+        <button id="sub">
+            -
+        </button>
+        <button id="mul">
+            *
+        </button>
+        <button id="div">
+            /
+        </button>
+    </div>
+
+    <div>
+        <h4>outputs</h4>
+        <style>
+            .output_box {
+                border: 1px solid red;
+                padding: 20px;
+                border-radius: 5px;
+            }
+        </style>
+        <div id="output_box" class="output_box">
+
+        </div>
+    </div>
 
     <script src="../../assets/js/learn.js"></script>
 </body>
